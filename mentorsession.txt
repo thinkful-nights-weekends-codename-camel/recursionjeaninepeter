@@ -24,7 +24,7 @@ reverseString('abcde')
 // base, exp 
 /*
   <= 8
- fn(2,3)
+ fn(2,3) 
     2 *  <= 4
   => fn(2, 2)
      2 * <=  2
@@ -39,3 +39,32 @@ const powers = function(base, exp) {
 	return base * powers(base, exp - 1)
 }
 powers(2,4);
+
+
+function sheepCount(num) { 
+	if (num === 0){ 
+		console.log('All sheep have jumped over the fence'); 
+		return;
+    }
+
+    console.log(`${num}: Another sheep jumps over the fence`)
+    return sheepCount(num - 1);
+} 
+
+
+str[0] + stringSplitter(str.splice(1))
+
+const filter = function(arr, predicate){
+    //base case
+    if (!arr.length){
+        return [];
+    }
+
+    if (predicate(arr[0])) {
+        // [5,6,3,8] -- > [5,6,3,8]
+        return [ arr[0], ...filter(arr.slice(1), predicate) ];
+    }
+
+    // [10,5,6,3,8] // [5,6,3,8]
+    return filter(arr.slice(1), predicate);
+};

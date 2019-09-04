@@ -5,3 +5,12 @@
 // *     |   *   *  |   *    *    *  |
 
 //  1st       2nd           3rd             nth?  
+
+function triangleNum(n){
+  if(n === 1) {
+    return 1
+  }
+
+  return n + triangleNum(n - 1)
+}
+triangleNum(6);

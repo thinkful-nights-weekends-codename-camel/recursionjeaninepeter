@@ -7,10 +7,13 @@
 // 1: Another sheep jumps over the fence
 // All sheep jumped over the fence
 
-  const sheepCount = function(num) {
+  function sheepCount(num) {
     if (num === 0){
-      return (`All sheep have jumped over the fence`)
+      console.log('All sheep have jumped over the fence');
+      return; 
+
     }
-      return sheepCount(num -1, `Another sheep jumps over the fence`);
+    console.log(`${num}: Another sheep jumps over the fence`);
+      return sheepCount(num - 1);
   }
     sheepCount(3);
