@@ -1,0 +1,41 @@
+// reverse a string recursively
+/*
+fn('abc')
+          <=
+  => fn('ab')
+              <=
+    => fn('a')
+                <= 
+      => fn('')
+
+        => base case result
+  */
+
+const reverseString = function(str) {
+  if (str.length === 1) {
+    return str;
+  }
+
+  return reverseString(str.slice(1)) + str[0];
+}
+
+reverseString('abcde')
+
+// base, exp 
+/*
+  <= 8
+ fn(2,3)
+    2 *  <= 4
+  => fn(2, 2)
+     2 * <=  2
+    => fn(2, 1)
+      => 2
+*/
+const powers = function(base, exp) {
+	if (exp === 1) {
+		return base;
+	}
+
+	return base * powers(base, exp - 1)
+}
+powers(2,4);
