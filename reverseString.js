@@ -9,5 +9,3 @@ function reverseString(str) {
 reverseString('word');
 
 
-1. look at the last letter and write it down -> g
-2. take the second last letter and place it in front of the previous letter -> gn
